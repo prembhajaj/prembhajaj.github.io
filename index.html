@@ -1,14 +1,16 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    
     <script>
         function callme(){
-            alert("hello");
+            alert(document.getElementById("ip1").value);
         }
     </script>
 </head>
 <body>
-
+<input  id="ip1" type="text">
 <button onclick="callme()">Click on me</button>
 
 
