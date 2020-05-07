@@ -12,31 +12,38 @@
     <title>Crack The Word</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+        
+        
         var i = -1;
-        var qL = ["Soft and plump, I’ll be right here. Throughout your dreams, you’ll keep me near. I’ll keep you comfy all through the night, and you’ll leave me here in the morning light.",
-        "Flat, black, and seemingly boring, I sit in the living room all day. Not until you turn me on do colors flash on my display.",
-        "From dirt, to paint, and everything in between, I’m your number one companion in keeping clean.",
-        "I’m almost like your favorite chair, but my seat’s a little bare. There’s not much there, I will admit. But I’ll keep it clean when you’ve had too much to eat.",
-        "I’m always running, though I never walk. Sometimes, I can sing, but I never talk. I have hands, I have a face. You use me to decide your pace. "];
+        var qL = ["Don’t frown at me, I made it clear. Won’t make a difference if you’re near. Just stand in front and I’ll show you exactly how the world will know you.",
+        "In a bowl or on a hook, just keep me somewhere you can look. On a shelf or in your pocket, make sure I’m near before you lock it.",
+        "Pull me back in the morning, spread me out at night. I might not keep you warm, but my purpose is for sight. Keep away the prying eyes by spreading me all out. Let the morning light shine in by bundling me tight. ",
+        "Keep me open, keep me closed. There’s really nothing I oppose. But when it rains, or when it’s cold, to keep me shut is what you’re told. ",
+        "Round and round, it’s my favorite game. I keep on going, but it’s always the same. I slosh around and when I’m through, the things you left will be like new."];
         
         
         
         
-        var aL = ["Pillow","Television","Soap","Toilet","Clock"];
+        var aL = ["Mirror","Key","Curtain","Window","Washing machine"];
         var answer = "";
         
         
     </script>
 </head>
 <body>
-
+    <div id="div1">
     <h1 class="navbar navbar-expand-lg navbar-dark bg-primary"><span id="head1" class="navbar-brand"></span></h1><br><br>
     <h4><span id="quest"> </span></h4><br><br>
     <input  id="ip1" type="text"><br><br>
     <button class="btn btn-primary" onclick="checkAns()">Submit</button>
-
+    </div>
 
 <script>
+    time = new Date().getHours();
+    if(time < 19){
+            document.getElementById("div1").style.display = "none";
+            alert("Quiz starts at 8 p.m.");
+        }
     getNext();
     function checkAns(){
         if (document.getElementById("ip1").value == answer){
@@ -49,7 +56,7 @@
         }
     }
 
-    
+
     function getNext(){
         i += 1;
         if (i<qL.length){
