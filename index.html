@@ -25,7 +25,7 @@
     <script>
         
         
-        var i = -1;
+          
         var qL = ["Open, shut, open shut. When you’re bored, I take the brunt. But there’s nothing here, you see. Time to visit the grocery.",
         "Is it ready? One way to know. Pop my lid to let it show. Watch the handle. Might be hot! Off the flame. I’m not a pot!",
         "No morning routine is complete without me. Pick me up and then you’ll see. If you leave without our session, you’ll spend the day worrying about your impression.",
@@ -36,7 +36,6 @@
         
         
         var aL = ["Refrigerator","Pan","Toothbrush","Wallet","Coffee"];
-        var answer = "";
         
         
     </script>
@@ -49,6 +48,7 @@
     <button class="btn btn-primary" onclick="checkAns()">Submit</button>
     </div>
 
+<script src= "index.js"></script>
 <script>
     time = new Date().getHours();
     if(time < 20){
@@ -56,34 +56,7 @@
             alert("Quiz starts at 8 p.m.");
         }
     getNext();
-    function checkAns(){
-        if (document.getElementById("ip1").value == answer){
-            document.getElementById("ip1").value = "";
-            getNext();
-        }
-        else{
-            document.getElementById("ip1").value = "";
-            alert("Wrong Answer. Retry!");
-        }
-    }
-
-
-    function getNext(){
-        i += 1;
-        if (i<qL.length){
-            
-            j = i+1;
-            document.getElementById("head1").innerText = "Question " + j;
-            document.getElementById("quest").innerText = qL[i];
-            answer = aL[i];
-        }
-        else
-        {
-            alert("Congrats!!! See You Tomorrow");
-        }
-
-    }
-  
+ 
 </script>
 </body>
 </html>
