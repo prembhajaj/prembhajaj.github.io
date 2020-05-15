@@ -4,7 +4,7 @@ var i = Math.floor(Math.random() * 5);
 
 
 function checkAns(){
-    if (document.getElementById("ip1").value == answer){
+    if (document.getElementById("ip1").value.toLowerCase() == answer.toLowerCase()){
         document.getElementById("ip1").value = "";
         getNext();
     }
